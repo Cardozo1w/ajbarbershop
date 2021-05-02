@@ -1,0 +1,101 @@
+.container{
+  width: 1000px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.titulos{
+  text-align: center;
+  color: white;
+}
+
+.nuevo-servicio{
+  display: flex;
+  justify-content: center;
+}
+.form-nuevo{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-nuevo input{
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+
+h1, h2, h3, h4{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+  font-size: 1.6rem;
+background-repeat: no-repeat;
+}
+
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+}
+h2 {
+
+}
+h3 {
+  font-size: 2.4rem;
+}
+.btn {
+  font-size:1.4rem;
+}
+.fecha-alta {
+  color: #AA076B;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.contacto p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.list-group-item{
+  background: rgba(255,255,255, .9);
+  width: 100%;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+form {
+  border-radius: .3rem;
+}
+
+
+.col-md-8{
+  padding: 0 !important;
+}
+
+.btn-nuevo{
+  padding: 10px 20px !important;
+  background-color: #0a3c99;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-nuevo:hover{
+  color: white;
+}
