@@ -43,7 +43,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+  /*background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);*/
   font-size: 1.6rem;
 background-repeat: no-repeat;
 }
@@ -59,6 +59,7 @@ h2 {
 }
 h3 {
   font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
 .btn {
   font-size:1.4rem;

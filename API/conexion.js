@@ -1,7 +1,7 @@
 const { Sequelize } = require("sequelize");
 
 const serviciosModelo = require("./models/servicios");
-//const usuariosModelo = require('./models/users');
+const ingresosModelo = require('./models/ingresos');
 
 const sequelize = new Sequelize("adminbarber", "root", "root", {
   host: "localhost",
@@ -10,7 +10,7 @@ const sequelize = new Sequelize("adminbarber", "root", "root", {
 });
 
 const Servicios = serviciosModelo(sequelize, Sequelize);
-//const Usuarios = usuariosModelo(sequelize, Sequelize);
+const Registros = ingresosModelo(sequelize, Sequelize);
 
 sequelize.sync({ force: false }).then(() => {
   console.log("Tablas Sincronizadas");
@@ -18,4 +18,5 @@ sequelize.sync({ force: false }).then(() => {
 
 module.exports = {
   Servicios,
+  Registros,
 };

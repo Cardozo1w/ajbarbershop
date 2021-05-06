@@ -11,7 +11,7 @@ const Transacciones = ({ idServicio }) => {
     
     const consultarAPI = async () => {
       const { data } = await axios.get(
-        `http://localhost:4343/api/6`
+        `http://localhost:4343/api/${idServicio}`
       );
       setServicio(
           ...servicio,
@@ -42,6 +42,7 @@ const Transacciones = ({ idServicio }) => {
               name="duracion"
               id="duracion"
               value={servicio.duracion}
+              disabled={true}
             ></input>
             <label>Costo</label>
             <input
