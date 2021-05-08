@@ -8,7 +8,7 @@ module.exports = (sequelize, type) => {
       },
       idServicio: type.INTEGER,
       fecha: type.DATE,
-      costo: type.INTEGER,
+      costo: type.INTEGER
     });
   };
   
