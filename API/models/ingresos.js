@@ -5,10 +5,9 @@ module.exports = (sequelize, type) => {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
-        timestamps: false,
       },
       idServicio: type.INTEGER,
-      fecha: type.STRING,
+      fecha: type.DATE,
       costo: type.INTEGER,
     });
   };

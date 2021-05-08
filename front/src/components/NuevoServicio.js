@@ -26,11 +26,11 @@ const NuevoServicio = ({ setConsulta }) => {
 
   return (
     <Fragment>
-      <div className="container d-flex justify-content-center flex-column">
-        <h1 className="titulos mt-5">AJ BarberShop</h1>
+      <div className="container d-flex align-items-center flex-column">
+        <h1 className="titulos mt-5">AJ BarberShop </h1>
         <h3 className="titulos mt-3">Agregar Servicio</h3>
 
-        <div className="container nuevo-servicio mt-5">
+        <div className="contenedor nuevo-servicio mt-5">
           <form className="form-nuevo" onSubmit={crearServicio}>
             <input
               type="text"
@@ -62,7 +62,7 @@ const NuevoServicio = ({ setConsulta }) => {
             ></input>
             {/**/}
             <input
-              className="btn btn-nuevo"
+              className="btn btn-nuevo mt-5"
               type="submit"
               value="Agregar Servicio"
             ></input>

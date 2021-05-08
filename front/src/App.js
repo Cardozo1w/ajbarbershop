@@ -4,8 +4,9 @@ import axios from "axios";
 
 //componentes
 import NuevoServicio from "./components/NuevoServicio";
-import Servicios from "./components/Servicios";
-import Transacciones from "./components/Transacciones";
+import Servicios from "./pages/Servicios";
+import Transacciones from "./pages/Transacciones";
+import Overview from './pages/Overview';
 function App() {
   //State de la aplicacion
   const [service, setService] = useState([]);
@@ -27,6 +28,7 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/overview" component={Overview} />
         <Route
           exact
           path="/servicios"
@@ -40,8 +42,7 @@ function App() {
           component={() => <NuevoServicio setConsulta={setConsulta} />}
         />
         <Route
-          exact
-          path="/transacciones"
+          path="/transacciones/:id"
           component={() => <Transacciones idServicio={idServicio} />}
         />
       </Switch>

@@ -7,6 +7,9 @@ const sequelize = new Sequelize("adminbarber", "root", "root", {
   host: "localhost",
   port: "8889",
   dialect: "mysql",
+  define: {
+    timestamps: false
+  }
 });
 
 const Servicios = serviciosModelo(sequelize, Sequelize);
