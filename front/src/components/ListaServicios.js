@@ -16,7 +16,6 @@ const ListaServicios = ({service}) => {
               <div className="d-flex w-100 justify-content-between mb-4 flex-column">
                 <h3>{servicio.nombre}</h3>
                 <p>Duracion: {servicio.duracion} minutos</p>
-                <p>Descripcion: {servicio.descripcion}</p>
                 <p>Costo: {servicio.costo} mxn</p>
               </div>
             </Link>

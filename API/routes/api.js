@@ -27,7 +27,7 @@ router.post("/api/registros", async (req, res) => {
   res.json(registros);
 });
 
-router.get("/total", async (req, res) => {
+router.post("/total", async (req, res) => {
   const hoy = req.body.hoy;
   const registros = await Registros.findAll({
     attributes: [[sequelize.fn('SUM', sequelize.col('costo')), 'ingresos']],
@@ -36,7 +36,7 @@ router.get("/total", async (req, res) => {
     },
   });
   res.json(registros);
-  console.log(req.params);
+  console.log(hoy);
 });
 
 module.exports = router;

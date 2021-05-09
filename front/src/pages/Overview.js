@@ -5,9 +5,7 @@ import axios from "axios";
 const Overview = () => {
   const fecha = new Date();
   const mes = fecha.getMonth() + 1;
-  //const hoy = (`${mes}/${fecha.getDate()}/${fecha.getFullYear()}`);
-  const hoy = "05/07/2021";
-  console.log(hoy);
+  const hoy = (`${mes}/${fecha.getDate()}/${fecha.getFullYear()}`);
 
   const [registros, setRegistros] = useState({
     ingresos: 0,
@@ -17,11 +15,9 @@ const Overview = () => {
 
   useEffect(() => {
     const registros = async () => {
-      const { data } = await axios.get(`http://localhost:4343/total`,
-        hoy
+      const { data } = await axios.post(`http://localhost:4343/total`,
+        {hoy}
       );
-      console.log(data);
-
       if (data[0].ingresos !== null) {
         setRegistros({ ...registros, ingresos: data[0].ingresos });
       }
@@ -35,6 +31,13 @@ const Overview = () => {
       <div className="container d-flex align-items-center flex-column">
         <h1 className="titulos mt-5">AJ BarberShop </h1>
         <h3 className="titulos mt-3">Overview</h3>
+
+<div className='card'>
+  <h3 className='titulos'>Ingresos totales</h3>
+  <p>$ {registros.ingresos}</p>
+</div>
+
+
       </div>
     </Fragment>
   );
