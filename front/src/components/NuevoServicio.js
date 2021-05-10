@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
+import Navbar from '../components/Navbar/Navbar';
 
 const NuevoServicio = ({ setConsulta }) => {
   const history = useHistory();
@@ -26,6 +27,9 @@ const NuevoServicio = ({ setConsulta }) => {
 
   return (
     <Fragment>
+      <div className="contenedor-nav">
+        <Navbar />
+      </div>
       <div className="container d-flex align-items-center flex-column">
         <h1 className="titulos mt-5">AJ BarberShop </h1>
         <h3 className="titulos mt-3">Agregar Servicio</h3>
@@ -62,7 +66,7 @@ const NuevoServicio = ({ setConsulta }) => {
             ></input>
             {/**/}
             <input
-              className="btn btn-nuevo mt-5"
+              className="btn btn-nuevo mt-3"
               type="submit"
               value="Agregar Servicio"
             ></input>

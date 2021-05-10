@@ -1,0 +1,16 @@
+.contenedor-nav{
+    width: 1440px;
+    max-width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.navbar{
+    background-color: #94181a;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.navbar a{
+    color: white;  
+}

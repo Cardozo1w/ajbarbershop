@@ -7,6 +7,8 @@ import NuevoServicio from "./components/NuevoServicio";
 import Servicios from "./pages/Servicios";
 import Transacciones from "./pages/Transacciones";
 import Overview from './pages/Overview';
+import Salidas from "./pages/Salidas";
+import Home from "./pages/Home";
 function App() {
   //State de la aplicacion
   const [service, setService] = useState([]);
@@ -28,6 +30,7 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/" component={Home}/>
         <Route exact path="/overview" component={Overview} />
         <Route
           exact
@@ -45,6 +48,7 @@ function App() {
           path="/transacciones/:id"
           component={() => <Transacciones idServicio={idServicio} />}
         />
+        <Route exact path="/salidas" component={() => <Salidas/>}/>
       </Switch>
     </Router>
   );

@@ -74,7 +74,7 @@ const Transacciones = ({ match }) => {
           ></input>
           {/**/}
           <input
-            className="btn btn-nuevo mt-5"
+            className="btn btn-nuevo mt-3"
             type="submit"
             value="Vender Servicio"
           ></input>

@@ -13,10 +13,12 @@ const ListaServicios = ({service}) => {
               key={servicio.id}
               to={`/transacciones/${servicio.id}`}
             >
-              <div className="d-flex w-100 justify-content-between mb-4 flex-column">
+              <div className="d-flex w-100 justify-content-around">
+                <div>
                 <h3>{servicio.nombre}</h3>
                 <p>Duracion: {servicio.duracion} minutos</p>
-                <p>Costo: {servicio.costo} mxn</p>
+                </div>
+                <p className="d-flex align-items-center">$ {servicio.costo}</p>
               </div>
             </Link>
           ))}
