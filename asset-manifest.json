@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ajbarbershop%E2%80%8B/static/css/main.55b5e532.chunk.css",
-    "main.js": "/ajbarbershop%E2%80%8B/static/js/main.aa8c5694.chunk.js",
-    "main.js.map": "/ajbarbershop%E2%80%8B/static/js/main.aa8c5694.chunk.js.map",
+    "main.js": "/ajbarbershop%E2%80%8B/static/js/main.c6fcb90e.chunk.js",
+    "main.js.map": "/ajbarbershop%E2%80%8B/static/js/main.c6fcb90e.chunk.js.map",
     "runtime-main.js": "/ajbarbershop%E2%80%8B/static/js/runtime-main.426e1171.js",
     "runtime-main.js.map": "/ajbarbershop%E2%80%8B/static/js/runtime-main.426e1171.js.map",
     "static/js/2.f4a40875.chunk.js": "/ajbarbershop%E2%80%8B/static/js/2.f4a40875.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.426e1171.js",
     "static/js/2.f4a40875.chunk.js",
     "static/css/main.55b5e532.chunk.css",
-    "static/js/main.aa8c5694.chunk.js"
+    "static/js/main.c6fcb90e.chunk.js"
   ]
 }
