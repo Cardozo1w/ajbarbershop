@@ -34,7 +34,7 @@ const NuevoServicio = ({ setConsulta }) => {
         <h1 className="titulos mt-5">AJ BarberShop </h1>
         <h3 className="titulos mt-3">Agregar Servicio</h3>
 
-        <div className="contenedor nuevo-servicio mt-5">
+        <div className="contenedor nuevo-servicio mt-3">
           <form className="form-nuevo" onSubmit={crearServicio}>
             <input
               type="text"

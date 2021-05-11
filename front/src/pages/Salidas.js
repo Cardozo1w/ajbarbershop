@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fragment } from "react";
-import { Link } from "react-router-dom";
-import Navbar from '../components/Navbar/Navbar';
+import { Link, useHistory } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar";
+import axios from "axios";
 
 function Salidas() {
+  const fecha = new Date();
+  const mes = fecha.getMonth() + 1;
+  const hoy = `${mes}/${fecha.getDate()}/${fecha.getFullYear()}`;
+
+  const [salida, setSalida] = useState([]);
+
+
+  const actualizarState = (e) => {
+    setSalida({
+      ...salida,
+      [e.target.name]: e.target.value,
+      fecha: hoy
+    });
+  };
+
+  const history = useHistory();
+
+  const crearSalida = async (e) => {
+    e.preventDefault();
+
+    const { data } = await axios.post("http://localhost:4343/salidas", salida);
+    console.log(data);
+    history.push("/overview");
+  };
+
   return (
     <Fragment>
       <div className="contenedor-nav">
@@ -14,27 +40,27 @@ function Salidas() {
         <h3 className="titulos mt-3">Registrar Salida</h3>
 
         <div className="contenedor nuevo-servicio mt-5">
-          <form className="form-nuevo" /*onSubmit={crearServicio}*/>
+          <form className="form-nuevo" onSubmit={crearSalida}>
             <input
               type="text"
               placeholder="Nombre del movimiento"
               name="nombre"
               id="nombre"
-              //onChange={actualizarState}
+              onChange={actualizarState}
             ></input>
             <input
               type="text"
               placeholder="Descripcion"
               name="descripcion"
               id="descripcion"
-              //onChange={actualizarState}
+              onChange={actualizarState}
             ></input>
             <input
               type="number"
               placeholder="Cantidad a retirar"
               name="costo"
               id="costo"
-              //onChange={actualizarState}
+              onChange={actualizarState}
             ></input>
             {/**/}
             <input

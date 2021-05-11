@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { MdAttachMoney, MdShoppingCart, MdHome } from "react-icons/md";
 import { GiExpense } from "react-icons/gi";
+import {RiFileHistoryFill} from 'react-icons/ri';
 import "./Navbar.css";
 
 function Navbar() {
@@ -17,6 +18,9 @@ function Navbar() {
         </Link>
         <Link to="/servicios">
           <MdShoppingCart />
+        </Link>
+        <Link to="/historialservicios">
+        <RiFileHistoryFill />
         </Link>
         <Link to="/salidas">
           <GiExpense />

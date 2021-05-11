@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
-
 
 .container {
   width: 1000px;
@@ -19,11 +18,10 @@
 
 .titulos {
   text-align: center;
-  color: #272727;
+  color: #0c344d;
   font-size: 3rem;
   border-bottom: 5px !important;
 }
-
 
 .nuevo-servicio {
   display: flex;
@@ -43,7 +41,7 @@
   font-size: 2rem;
 }
 
-.form-nuevo label{
+.form-nuevo label {
   font-size: 2rem;
 }
 
@@ -106,7 +104,7 @@ h3 {
   margin: 0;
 }
 
-.list-group{
+.list-group {
   align-items: center;
 }
 
@@ -120,20 +118,23 @@ h3 {
   font-size: 3rem !important;
 }
 
-.list-group-item:hover{
+.list-group-item:hover {
   background-color: white !important;
   color: #272727;
 }
 
-.list-group-item:nth-child(2n){
+.list-group-item:nth-child(2n) {
   background-color: #94181a;
 }
 
 .list-group-item h3,
-.list-group-item p{
+.list-group-item p {
   font-size: 2rem;
 }
 
+.list-group-item:last-of-type{
+  margin-bottom: 80px;
+}
 form {
   border-radius: 0.3rem;
 }
@@ -142,7 +143,7 @@ form {
   padding: 0 !important;
 }
 
-.btn-container{
+.btn-container {
   width: 90%;
 }
 
@@ -158,37 +159,37 @@ form {
   color: white;
 }
 
-.btn-nuevo:nth-child(2n){
+.btn-nuevo:nth-child(2n) {
   background-color: #94181a;
 }
 
-
-.card{
+.card {
   width: 90%;
   background-color: #39739b;
   padding: 10px;
   border-radius: 10px;
   text-align: center;
-  margin-top: 20px;  
+  margin-top: 20px;
 }
 
-.card:nth-child(2n){
+.card:nth-child(2n) {
   background-color: #94181a;
 }
 
 .card h3,
-.card p{
+.card p {
   color: white;
   font-size: 2rem;
 }
 
-.menu{
+.menu {
+  width: 75%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.menu-item{
+.menu-item {
   background-color: #94181a;
   width: 150px;
   height: 150px;
@@ -197,11 +198,18 @@ form {
   margin-bottom: 10px;
 }
 
-.menu-item:nth-child(1n){
+@media (min-width: 768px){
+  .menu-item{
+    flex-basis: unset;
+  }
+  
+}
+
+.menu-item:nth-child(1n) {
   float: right;
 }
 
-.menu-item a{
+.menu-item a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -212,11 +220,10 @@ form {
   font: 3rem !important;
 }
 
-.menu-item:hover{
+.menu-item:hover {
   background-color: #39739b;
 }
 
-.menu-item a:hover{
+.menu-item a:hover {
   text-decoration: none;
 }
-

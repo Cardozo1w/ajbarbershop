@@ -32,7 +32,7 @@ function Home() {
           </div>
 
           <div className="menu-item">
-            <Link to="/salidas">
+            <Link to="/historialventas">
               <RiFileHistoryFill />
               <h3>Ventas</h3>
             </Link>

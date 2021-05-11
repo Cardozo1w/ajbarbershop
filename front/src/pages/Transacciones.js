@@ -8,6 +8,11 @@ const Transacciones = ({ match }) => {
   const id = match.params.id;
   const history = useHistory();
 
+
+  const fecha = new Date();
+  const mes = fecha.getMonth() + 1;
+  const hoy = (`${mes}/${fecha.getDate()}/${fecha.getFullYear()}`);
+
   useEffect(() => {
     const consultarAPI = async () => {
       const { data } = await axios.get(`http://localhost:4343/api/${id}`);
@@ -20,18 +25,15 @@ const Transacciones = ({ match }) => {
   const actualizarState = (e) => {
     setServicio({
       ...servicio,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
 
-  const fecha = new Date();
-  const mes = fecha.getMonth() + 1;
-  const hoy = (`${mes}/${fecha.getDate()}/${fecha.getFullYear()}`);
 
   const nuevoRegistro = async (e) => {
     e.preventDefault();
     const { data } = await axios.post("http://localhost:4343/api/registros", {
-      idServicio: id,
+      servicioId: servicio.id,
       fecha: hoy,
       costo: servicio.costo
     });

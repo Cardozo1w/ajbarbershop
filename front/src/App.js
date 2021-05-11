@@ -9,6 +9,7 @@ import Transacciones from "./pages/Transacciones";
 import Overview from './pages/Overview';
 import Salidas from "./pages/Salidas";
 import Home from "./pages/Home";
+import HistorialVentas from "./pages/HistorialVentas";
 function App() {
   //State de la aplicacion
   const [service, setService] = useState([]);
@@ -49,6 +50,7 @@ function App() {
           component={() => <Transacciones idServicio={idServicio} />}
         />
         <Route exact path="/salidas" component={() => <Salidas/>}/>
+        <Route exact path="/historialventas" component={HistorialVentas}/>
       </Switch>
     </Router>
   );

@@ -3,6 +3,7 @@
     max-width: 100%;
     position: fixed;
     bottom: 0;
+    z-index: 1;
 }
 .navbar{
     background-color: #94181a;
